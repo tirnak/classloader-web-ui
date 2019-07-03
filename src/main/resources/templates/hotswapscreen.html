@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HotSwap page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <form method="post" action="/update-class"
+       th:action="@{/update-class}" th:object="${clazz}">
+
+        <textarea th:field="*{body}"></textarea>
+        <button type="submit">send your new code</button>
+    </form>
+    <label th:text="${result}"></label>
+</body>
+</html>
